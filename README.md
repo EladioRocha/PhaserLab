@@ -1,37 +1,31 @@
-# PhaserLab
+# Phaser Game Examples
 
-Colección de juegos y ejercicios de Phaser: Camino Ninja, El leñador, Nave espacial y Recoge los diamantes. Incluye una plantilla y una secuencia de lecciones de Camino Ninja.
+A collection of **JavaScript games and Phaser lessons** covering sprites, mouse input, animations, sound, lives, and game-over conditions.
 
-## Estructura
+## Run locally
 
-- [02 - Camino Ninja](02%20-%20Camino%20Ninja)
-- [Camino_ninja](Camino_ninja)
-- [El_leniador](El_leniador)
-- [Nave_espacial](Nave_espacial)
-- [Recoge_los_diamantes](Recoge_los_diamantes)
-- [Template](Template)
-
-## Preparación y uso
-
-Sirve la raíz con un servidor estático; por ejemplo, si tienes Python 3:
+The examples include browser entry points and assets. Serve the repository through HTTP so scripts and game assets can load consistently. With Python 3 installed:
 
 ```sh
 python -m http.server 8000 --bind 127.0.0.1
 ```
 
-Abre `http://127.0.0.1:8000/` y navega al ejemplo:
+Open **http://127.0.0.1:8000/** and choose an example.
 
-- [02 - Camino Ninja/00 - Proyecto Vacio/index.html](02%20-%20Camino%20Ninja/00%20-%20Proyecto%20Vacio/index.html)
-- [02 - Camino Ninja/01 - Creando el proyecto/index.html](02%20-%20Camino%20Ninja/01%20-%20Creando%20el%20proyecto/index.html)
-- [02 - Camino Ninja/02 - Animaciones usando tweenings/index.html](02%20-%20Camino%20Ninja/02%20-%20Animaciones%20usando%20tweenings/index.html)
-- [02 - Camino Ninja/03 - Input de Raton/index.html](02%20-%20Camino%20Ninja/03%20-%20Input%20de%20Raton/index.html)
-- [02 - Camino Ninja/04 - Prototipos - Heredando de la clase Sprite/index.html](02%20-%20Camino%20Ninja/04%20-%20Prototipos%20-%20Heredando%20de%20la%20clase%20Sprite/index.html)
-- [02 - Camino Ninja/05 - Controlando al Ninja/index.html](02%20-%20Camino%20Ninja/05%20-%20Controlando%20al%20Ninja/index.html)
-- [02 - Camino Ninja/06 - Manager de Ninjas/index.html](02%20-%20Camino%20Ninja/06%20-%20Manager%20de%20Ninjas/index.html)
-- [02 - Camino Ninja/07 - Estructura de Datos/index.html](02%20-%20Camino%20Ninja/07%20-%20Estructura%20de%20Datos/index.html)
+## Examples
 
-Los recursos cargados desde servicios externos requieren conexión. La comprobación local debe incluir la consola del navegador y la carga de imágenes, scripts y estilos.
+| Example | Entry point |
+| --- | --- |
+| Ninja Path | [Camino_ninja/index.html](Camino_ninja/index.html) |
+| Lumberjack | [El_leniador/index.html](El_leniador/index.html) |
+| Spaceship | [Nave_espacial/index.html](Nave_espacial/index.html) |
+| Collect the Diamonds | [Recoge_los_diamantes/index.html](Recoge_los_diamantes/index.html) |
+| Empty game template | [Template/index.html](Template/index.html) |
 
-## Validación y estado
+The [Ninja Path lesson sequence](02%20-%20Camino%20Ninja/) contains incremental versions covering project setup, tweening, mouse input, sprite inheritance, controls, animations, lives, JSON loading, and sound. Directory names are retained in their original form to preserve asset paths.
 
-Esta guía se contrastó con el árbol de archivos y los manifiestos del repositorio. No se ha validado una ejecución completa contra servicios externos, bases de datos o hardware. Las versiones y los scripts mostrados describen el código actual; no implican que sus dependencias antiguas sigan siendo compatibles.
+## Development and validation
+
+Start with the selected example's `index.html` and its `src/` directory. These are older Phaser examples with bundled library files; upgrading Phaser requires checking the APIs used by each game.
+
+There is no repository-wide package manifest or automated test suite. Check asset loading, controls, animations, audio, and end-of-game behavior manually. This documentation update did not perform a full browser playthrough.
